@@ -12,6 +12,8 @@ gulp.task('serve', ['styles', 'scripts'], function(){
   browserSync({
     server: {
       baseDir: 'dist'
-    }
+    },
+    online: true,
+    xip: true
   });
 });
