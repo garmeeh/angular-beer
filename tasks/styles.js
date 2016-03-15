@@ -1,7 +1,7 @@
 'use strict';
 
 /*
-* Gulp Task: Styles
+* Gulp Task: gulp styles
 */
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
