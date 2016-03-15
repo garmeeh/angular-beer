@@ -1,5 +1,8 @@
 'use strict';
 
+/*
+* Gulp Task: scripts
+*/
 var gulp = require('gulp');
 var browserify = require('browserify');
 var gutil = require('gulp-util');
