@@ -1,0 +1,27 @@
+/*
+* App Styles
+*/
+@media #{$small-only}{
+  body{
+    background: $white;
+  }
+}
+.s-app__body{
+  background: $white;
+  @media #{$medium-up}{
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 30px;
+  }
+}
+.s-app__header{
+  background: $white;
+  @media #{$medium-up}{
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 50px;
+    padding: 16px 0 0;
+  }
+}

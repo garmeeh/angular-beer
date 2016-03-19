@@ -1,0 +1,17 @@
+/*
+* Text Turmps
+*/
+.t-subheading{
+  font-style: italic;
+  color: $orange;
+  font-weight: 500;
+}
+.t-title{
+  color: $white;
+  background: $dark-orange;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px dashed $very-light-gray;
+  box-shadow: 0 0 0 4px $red, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  display: inline-block;
+}

@@ -9,17 +9,36 @@
 @import "settings.foundation";
 
 /*
-* Foundation (Vendor, but pulled in here so it can be used)
-*/
-@import "../../node_modules/foundation-sites/scss/foundation"; // Just gives access to mixins.
-@include foundation-everything; // Load all of foundations classes for prototyping
-
-/*
 * Generic
 */
 @import "generic.box-sizing";
 @import "generic.reset";
 
 /*
+* Foundation (Vendor, but pulled in here so it can be used)
+*/
+@import "../../node_modules/foundation-sites/scss/foundation"; // Just gives access to mixins.
+//@include foundation-everything; // Load all of foundations classes for prototyping
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-button;
+
+/*
 * UI Components
 */
+@import "component.nav";
+@import "component.media";
+@import "component.text-block";
+@import "component.pills";
+/*
+* Turmps
+*/
+@import "trumps.text";
+
+/*
+* Single Set of Styles
+* (Organsied Shame)
+*/
+@import "single.app";

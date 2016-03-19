@@ -1,0 +1,17 @@
+/*
+* Text Block
+*/
+.c-text-block{
+  padding: 20px 4px 30px;
+
+  .button{
+    @media #{$small-only}{
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
+
+.c-text-block__no-desc{
+  font-weight: bold;
+}

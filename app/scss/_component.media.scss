@@ -1,0 +1,22 @@
+/*
+* Media Object Styles
+*/
+.c-media{
+  position: relative;
+  @media #{$small-only}{
+    margin-bottom: 18px;
+  }
+  border: 2px solid $dark-turquoise;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.c-media__image{
+  width: 100%;
+}
+
+.c-media__overlay{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

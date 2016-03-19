@@ -6,7 +6,7 @@
 
   var config = {
       // Watch html files
-      workfiles_watch: 'dist/*.html',
+      workfiles_watch: 'dist/**/*.html',
 
       js_entry_file: 'app/js/app.js',
       js_dir: 'dist/js/',

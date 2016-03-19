@@ -1,0 +1,19 @@
+/*
+* Pills
+*/
+.c-pills{
+  margin: 0 0 1.2em;
+  padding: 0;
+  list-style: none;
+}
+
+.c-pills__item{
+  display: inline-block;
+  background: $orange;
+  color: $white;
+  font-size: 0.8em;
+  padding: 0.2em 1em;
+  border-radius: $global-radius;
+  border: 1px dashed $very-light-gray;
+  box-shadow: 0 0 0 1px $red, 2px 1px 4px 1px rgba(10, 10, 0, 0.5);
+}

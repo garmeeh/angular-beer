@@ -11,7 +11,11 @@ var config = require('../config');
 gulp.task('serve', ['styles', 'scripts'], function(){
   browserSync({
     server: {
-      baseDir: 'dist'
+      baseDir: './dist',
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
     },
     online: true,
     xip: true

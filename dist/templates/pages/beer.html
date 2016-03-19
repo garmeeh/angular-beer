@@ -1,0 +1,29 @@
+<div class="row s-app__header">
+  <div class="small-12 columns">
+    <nav class="c-nav">
+      <h1 class="c-nav__title"><span class="t-title">{{ beer.name }}</span></h1>
+      <button class="button success large c-nav__button" ng-click="random()">Grab a Beer</button>
+    </nav>
+  </div>
+</div>
+
+<div class="row align-middle s-app__body">
+  <div class="small-12 medium-4 columns">
+    <div class="c-media">
+      <img ng-src="{{ beer.labels.large }}" class="c-media__image">
+      <span class="c-media__overlay" ng-show="beer.organic"><img src="/images/organic.png"></span>
+    </div>
+  </div>
+
+  <div class="small-12 medium-8 columns">
+    <div class="c-text-block">
+      <h2>A Little About {{ beer.name }}</h2>
+      <ul class="c-pills" ng-show="beer.style.name">
+        <li class="c-pills__item">{{ beer.style.name }}</li>
+      </ul>
+      <p ng-show="beer.description">{{ beer.description }}</p>
+      <p ng-show="!beer.description" class="c-text-block__no-desc">What? No description was given for {{ beer.name }}. Hold my beer!</p>
+      <a ui-sref="app.brewery({ breweryId: brewery.id })" class="button secondary">View Brewery</a>
+    </div>
+  </div>
+</div>

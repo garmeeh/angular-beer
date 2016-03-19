@@ -1,0 +1,38 @@
+/*
+* Nav Styles
+*/
+.c-nav{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  @media #{$medium-up}{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.c-nav__title{
+  z-index: 0;
+  order: 2;
+  text-align: center;
+  margin: 16px 0;
+  @media #{$medium-up}{
+    order: 1;
+    text-align: left;
+    margin: 0;
+    text-align: center;
+    flex: 2 1;
+    .is-detail-page &{
+      order: 2;
+    }
+  }
+}
+.c-nav__button{
+  order: 1;
+  @media #{$medium-up}{
+    order: 2;
+    .is-detail-page &{
+      order: 1;
+    }
+  }
+}
