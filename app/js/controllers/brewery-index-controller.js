@@ -5,6 +5,7 @@
 */
 
 module.exports = function($scope, $stateParams, BreweryFactory){
+
   $scope.getBrewery = function(){
     BreweryFactory
       .getBrewery($stateParams.breweryId)
