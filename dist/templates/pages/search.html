@@ -16,6 +16,7 @@
   <div class="small-12 columns">
     <p ng-if="searchQuery">Search Results For: {{ searchQuery }}</p>
     <p ng-if="!searchQuery">You haven't searched for anything yet.</p>
+    <p ng-show="!results.length && searchQuery" class="t-bold">No results where found for {{ searchQuery }}.</p>
     <ul class="basic-list">
       <li ng-repeat="result in results">
         <div class="c-media-object">
@@ -29,7 +30,7 @@
               <li class="c-pills__item">Style:</li>
               <li class="c-pills__item">{{ result.style.name }}</li>
             </ul>
-            <p ng-show="result.description">{{ result.description | limitTo: 250 }}</p>
+            <p ng-show="result.description">{{ result.description | limitTo: 250 }}...</p>
             <p ng-show="!result.description" class="c-text-block__no-desc">What? No description was given for {{ beer.name }}. Hold my beer!</p>
             <p ng-if="result.breweries[0]"><b>Brewey:</b> {{ result.breweries[0].name }}</p>
             <a ui-sref="app.brewery({ breweryId: result.breweries[0].id })" class="button secondary" ng-if="result.breweries[0]">View Brewery</a>

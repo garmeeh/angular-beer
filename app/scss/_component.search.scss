@@ -12,8 +12,9 @@
   }
 }
 .c-search__input{
+  display: block;
   position: relative;
-  flex: 2 1;
+  flex: 1;
   padding: 10px;
   font-weight: 700;
   font-size: 1.2em;
@@ -30,7 +31,6 @@
 
 }
 .c-search__button{
-  flex: 0 2;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

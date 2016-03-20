@@ -35,4 +35,9 @@
       order: 1;
     }
   }
+  @media #{$small-only}{
+    a, button{
+      width: 100%;
+    }
+  }
 }

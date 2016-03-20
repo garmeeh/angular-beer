@@ -21,3 +21,9 @@
 .t-bold{
   font-weight: 700;
 }
+.t-mb{
+  margin-bottom: 16px;
+  @media #{$medium-up}{
+  margin-bottom: 0;	
+  }
+}

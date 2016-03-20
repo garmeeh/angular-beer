@@ -1981,6 +1981,9 @@ kbd {
         -webkit-order: 1;
             -ms-flex-order: 1;
                 order: 1; } }
+  @media screen and (max-width: 39.9375em) {
+    .c-nav__buttons a, .c-nav__buttons button {
+      width: 100%; } }
 
 /*
 * Media Object Styles
@@ -2088,10 +2091,11 @@ kbd {
               order: 1; } }
 
 .c-search__input {
+  display: block;
   position: relative;
-  -webkit-flex: 2 1;
-      -ms-flex: 2 1;
-          flex: 2 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px;
   font-weight: 700;
   font-size: 1.2em;
@@ -2105,9 +2109,6 @@ kbd {
     border-right: none; }
 
 .c-search__button {
-  -webkit-flex: 0 2;
-      -ms-flex: 0 2;
-          flex: 0 2;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2136,6 +2137,12 @@ kbd {
 
 .t-bold {
   font-weight: 700; }
+
+.t-mb {
+  margin-bottom: 16px; }
+  @media screen and (min-width: 40em) {
+    .t-mb {
+      margin-bottom: 0; } }
 
 /*
 * Single Set of Styles
