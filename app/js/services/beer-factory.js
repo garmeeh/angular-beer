@@ -5,7 +5,7 @@
 */
 
 module.exports = function($http, $q){
-
+ 
     return {
       getBeer: function(bustCache){
         var defer = $q.defer();

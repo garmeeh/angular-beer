@@ -2,7 +2,10 @@
   <div class="small-12 columns">
     <nav class="c-nav is-detail-page">
       <h1 class="c-nav__title"><span class="t-title">{{ brewery.name }}</span></h1>
-      <button class="button success large c-nav__button" ui-sref="app.beer">Grab Another Beer</button>
+      <div class="c-nav__buttons">
+        <button class="button success large" ui-sref="app.beer">Grab Another Beer</button>
+        <a class="button secondary large" ui-sref="app.search">Search</a>
+      </div>
     </nav>
   </div>
 </div>
@@ -10,14 +13,15 @@
 <div class="row align-middle s-app__body">
   <div class="small-12 medium-4 columns">
     <div class="c-media">
-      <img ng-src="{{ brewery.images.squareLarge }}" class="c-media__image">
+      <img ng-src="{{ brewery.images.squareLarge }}" class="c-media__image" ng-show="brewery.images.squareLarge">
+      <img src="/images/fallback.png" class="c-media__image" ng-hide="brewery.images.squareLarge">
     </div>
   </div>
 
   <div class="small-12 medium-8 columns">
     <div class="c-text-block">
-      <h2>A Little About {{ brewery.name }}</h2>
-      <h3 class="t-subheading">Established: {{ brewery.established }}</h3>
+      <h2>A Little About: <span class="t-dark-orange">{{ brewery.name }}</span></h2>
+      <h3 class="t-subheading">Established: {{ brewery.established }}<span ng-hide="brewery.established">Not Given</span></h3>
       <p ng-show="brewery.description">{{ brewery.description }}</p>
       <p ng-show="!brewery.description" class="t-bold">What? No description was given for {{ brewery.name }}. Hold my beer!</p>
       <a ng-href="{{ brewery.website }}" class="button secondary" target="_blank" ng-show="brewery.website">Visit Their Website</a>

@@ -21,8 +21,6 @@ module.exports = function($scope, BeerFactory){
           $scope.orgainc = true;
         }
         $scope.brewery = $scope.beer.breweries[0];
-        // console.log($scope.beer);
-        // console.log($scope.beer.breweries[0]);
     });
   };
 

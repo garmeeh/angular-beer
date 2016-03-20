@@ -1,11 +1,13 @@
 <div class="row s-app__header">
   <div class="small-12 columns">
     <nav class="c-nav">
-      <button class="button success large c-nav__button" ui-sref="app.beer">Grab Another Beer</button>
       <form name="searchForm" class="c-search" ng-submit="searchForm.$valid && search(query)" novalidate>
         <input type="text" ng-model="query" placeholder="Search" class="c-search__input" required/>
         <button type="submit" class="button large secondary c-search__button">Search</button>
       </form>
+      <div class="c-nav__buttons">
+        <button class="button success large" ui-sref="app.beer">Grab Random Beer</button>
+      </div>
     </nav>
   </div>
 </div>
