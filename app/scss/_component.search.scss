@@ -5,11 +5,14 @@
   order: 2;
   flex:  0 0 50%;
   display: flex;
+  margin: 16px 0;
   @media #{$medium-up}{
+    margin: 0;
     order: 1;
   }
 }
 .c-search__input{
+  position: relative;
   flex: 2 1;
   padding: 10px;
   font-weight: 700;
@@ -24,6 +27,7 @@
     border: 2px solid $green;
     border-right: none;
   }
+
 }
 .c-search__button{
   flex: 0 2;
