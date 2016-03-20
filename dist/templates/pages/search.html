@@ -1,0 +1,34 @@
+<div class="row s-app__header">
+  <div class="small-12 columns">
+    <nav class="c-nav">
+      <button class="button success large c-nav__button" ui-sref="app.beer">Grab Another Beer</button>
+      <form class="c-search">
+        <input type="text" ng-model="query" placeholder="Search" class="c-search__input" />
+        <button type="submit" ng-click="search(query)" class="button large secondary c-search__button">Search</button>
+      </form>
+    </nav>
+  </div>
+</div>
+
+<div class="row align-middle s-app__body">
+  <div class="small-12 columns">
+    <ul class="basic-list">
+      <li ng-repeat="result in results">
+        <div class="c-media-object">
+          <div class="c-media-object__thumbnail">
+            <img ng-src="{{ result.labels.medium }}" ng-show="result.labels.medium">
+            <img src="/images/fallback.png" ng-show="!result.labels.medium">
+          </div>
+          <div class="c-media-object__body">
+            <h4>{{ result.name }}</h4>
+            <ul class="c-pills">
+              <li class="c-pills__item">Style:</li>
+              <li class="c-pills__item">{{ result.style.name }}</li>
+            </ul>
+            <p>Desc: {{ result.description | limitTo: 250 }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -15,7 +15,7 @@
 *   This file is a copy of: node_modules/foundation-sites/scss/settings/_settings.scss
 */
 /*
-* Generic
+* Generic/Tools
 */
 /*
 * Generic Box Sizing
@@ -45,6 +45,15 @@ hr {
 abbr[title],
 dfn[title] {
   cursor: help; }
+
+/*
+* Helper Classes
+*/
+.basic-list {
+  margin: 0;
+  padding: 0; }
+  .basic-list > li {
+    display: block; }
 
 /*
 * Foundation (Vendor, but pulled in here so it can be used)
@@ -1994,6 +2003,33 @@ kbd {
   bottom: 0; }
 
 /*
+* Media Object
+*/
+.c-media-object {
+  border-bottom: 2px dashed #2C3E50;
+  padding: 1em 0; }
+  @media screen and (min-width: 40em) {
+    .c-media-object {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.c-media-object__thumbnail {
+  text-align: center; }
+  @media screen and (min-width: 40em) {
+    .c-media-object__thumbnail {
+      text-align: left; } }
+
+.c-media-object__body {
+  padding: 2em;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+/*
 * Text Block
 */
 .c-text-block {
@@ -2015,14 +2051,62 @@ kbd {
   list-style: none; }
 
 .c-pills__item {
-  display: inline-block;
-  background: #E67E22;
-  color: #fefefe;
-  font-size: 0.8em;
-  padding: 0.2em 1em;
-  border-radius: 15px;
-  border: 1px dashed #ECF0F1;
-  box-shadow: 0 0 0 1px #C0392B, 2px 1px 4px 1px rgba(10, 10, 0, 0.5); }
+  display: inline-block; }
+  .c-pills__item:nth-child(odd) {
+    font-weight: 700;
+    color: #E67E22;
+    margin-right: 3px;
+    font-size: 1.1em; }
+  .c-pills__item:nth-child(even) {
+    padding: 0.2em 1em;
+    background: #E67E22;
+    color: #fefefe;
+    font-size: 0.8em;
+    border-radius: 15px;
+    border: 1px dashed #ECF0F1;
+    box-shadow: 0 0 0 1px #C0392B, 2px 1px 4px 1px rgba(10, 10, 0, 0.5); }
+
+/*
+* Search Form
+*/
+.c-search {
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media screen and (min-width: 40em) {
+    .c-search {
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; } }
+
+.c-search__input {
+  -webkit-flex: 2 1;
+      -ms-flex: 2 1;
+          flex: 2 1;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.2em;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #2C3E50;
+  border-right: none; }
+  .c-search__input:focus {
+    outline: none;
+    border: 2px solid #27AE60;
+    border-right: none; }
+
+.c-search__button {
+  -webkit-flex: 0 2;
+      -ms-flex: 0 2;
+          flex: 0 2;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
 
 /*
 * Turmps

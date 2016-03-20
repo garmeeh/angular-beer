@@ -9,11 +9,19 @@
 
 .c-pills__item{
   display: inline-block;
-  background: $orange;
-  color: $white;
-  font-size: 0.8em;
-  padding: 0.2em 1em;
-  border-radius: $global-radius;
-  border: 1px dashed $very-light-gray;
-  box-shadow: 0 0 0 1px $red, 2px 1px 4px 1px rgba(10, 10, 0, 0.5);
+  &:nth-child(odd){
+    font-weight: 700;
+    color: $orange;
+    margin-right: 3px;
+    font-size: 1.1em;
+  }
+  &:nth-child(even){
+    padding: 0.2em 1em;
+    background: $orange;
+    color: $white;
+    font-size: 0.8em;
+    border-radius: $global-radius;
+    border: 1px dashed $very-light-gray;
+    box-shadow: 0 0 0 1px $red, 2px 1px 4px 1px rgba(10, 10, 0, 0.5);
+  }
 }

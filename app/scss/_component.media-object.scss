@@ -1,0 +1,23 @@
+/*
+* Media Object
+*/
+.c-media-object{
+  border-bottom: 2px dashed $dark-asphalt;
+  padding: 1em 0;
+  @media #{$medium-up}{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.c-media-object__thumbnail{
+  text-align: center;
+  @media #{$medium-up}{
+    text-align: left;
+  }
+}
+
+.c-media-object__body{
+  padding: 2em;
+  flex: 1;
+}

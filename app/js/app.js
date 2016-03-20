@@ -43,5 +43,14 @@
             controller: 'BreweryIndexController'
           }
         }
+      })
+      .state('app.search',{
+        url: "/search",
+        views: {
+          '@':{
+            templateUrl: 'templates/pages/search.html',
+            controller: 'SearchController'
+          }
+        }
       });
   });

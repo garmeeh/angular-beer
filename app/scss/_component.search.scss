@@ -1,0 +1,32 @@
+/*
+* Search Form
+*/
+.c-search{
+  order: 2;
+  flex:  0 0 50%;
+  display: flex;
+  @media #{$medium-up}{
+    order: 1;
+  }
+}
+.c-search__input{
+  flex: 2 1;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.2em;
+  border-top-left-radius: $global-radius;
+  border-bottom-left-radius: $global-radius;
+  border: 1px solid $dark-asphalt;
+  border-right: none;
+
+  &:focus{
+    outline: none;
+    border: 2px solid $green;
+    border-right: none;
+  }
+}
+.c-search__button{
+  flex: 0 2;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
